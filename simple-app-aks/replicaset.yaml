@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: myapp-replicaset
+  labels:
+    app: simple-app
+    type: python-app
+spec:
+  template:
+    metadata:
+      name: simple-app
+      labels:
+        app: simple-app
+        type: python-app
+    spec:
+      containers:
+      - name: simple-app
+        image: fabenavideso/simple-app
+  replicas: 3
+  selector:
+    matchLabels:
+      type: python-app # to filter the pods to be controlled by this replicaset
