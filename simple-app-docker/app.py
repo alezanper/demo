@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def main():
-    return "<h1>Hello from: " + socket.gethostname() + "</h1>"
+    return "<h1>My Demo</h1>" + "<p>Simple Python Application for testing purposes.</p>" + "<h3>Hello from: " + socket.gethostname() + "</h3>" + "<button>Button</button>"
 
 @app.route('/<name>')
 def greeting(name):
-    return "<h1>Hello, " + name + "</h1>"
+    return "<h3>Hello, " + name + "</h3>"
 
 if __name__ == "__main__":
     app.run()
