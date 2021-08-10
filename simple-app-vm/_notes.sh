@@ -1,4 +1,4 @@
-# connect using:
+# connect to ubuntu machine using:
 # ssh azure@ip.ip.ip.ip
 
 sudo su
